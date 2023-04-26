@@ -1,0 +1,53 @@
+ul, li, h2 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ul li:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+ul li:has(.active) {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+ul a {
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+}
+ul a.active {
+  font-weight: bold;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+.header {
+  height: 60px;
+  justify-content: space-between;
+}
+.sidenav-menu {
+  width: 300px;
+}
+@media (max-width: 599px) {
+  .sidenav-menu {
+    width: 100%;
+  }
+}
+.sidenav-container {
+  position: absolute;
+  top: 60px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.content {
+  padding: 20px;
+  box-sizing: border-box;
+}
+mat-icon {
+  cursor: pointer;
+}
+

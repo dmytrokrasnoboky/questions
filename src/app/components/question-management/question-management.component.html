@@ -1,0 +1,21 @@
+<div class="container">
+  <mat-toolbar class="header">
+    <h2>Questions</h2>
+    <mat-icon *ngIf="isMobile" [@menuAnimation]="isMenuOpen" (click)="toggleMenu()">menu</mat-icon>
+  </mat-toolbar>
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav mode="side" opened class="sidenav-menu" fixedBottomGap="0">
+      <nav>
+        <ul (click)="toggleMenu()">
+          <li><a routerLink="main" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Main</a></li>
+          <li><a routerLink="lists" >List</a></li>
+          <li><a routerLink="create" routerLinkActive="active">Create</a></li>
+        </ul>
+      </nav>
+    </mat-sidenav>
+    <mat-sidenav-content class="content">
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+
